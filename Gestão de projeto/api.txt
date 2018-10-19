@@ -1,0 +1,19 @@
+GET /rest/api/2//mypermissions
+
+GET /rest/api/2/applicationrole
+GET /rest/api/2/applicationrole/{key}
+PUT /rest/api/2/applicationrole/{key}
+
+GET /rest/api/2/auditing/record
+
+GET /rest/api/2/dashboard
+
+GET /rest/api/2/issuetype/{id}
+
+GET /rest/api/2/status/{idOrName}
+
+
+GET /rest/api/2/user
+PUT /rest/api/2/user
+POST /rest/api/2/user
+GET /rest/api/2/user/search

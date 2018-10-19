@@ -1,0 +1,4 @@
+codigo;login;senha
+10;admin@sistema.com;admin
+11;senai@escola.br;super
+12;professor@ninjas.pro;jedi

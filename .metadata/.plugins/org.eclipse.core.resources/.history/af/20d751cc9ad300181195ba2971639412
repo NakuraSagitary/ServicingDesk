@@ -1,0 +1,4 @@
+activeProfiles=(% USER_HOME% /. M2 / settings.xml)
+eclipse.preferences.version=1
+resolveWorkspaceProjects=false
+version=1

@@ -1,0 +1,4 @@
+Codigo;Nome_Peca;Prejuizo_Estimado_Por_Peca
+1001;CPU;2,3
+1002;HD;3,45
+1003;Memória RAM;4,80

@@ -1,0 +1,24 @@
+Atividades que serão desenvolvidas
+chamado de conserto
+
+visualização dos chamados abertos
+
+get e post da API
+
+Jira cria projeto
+
+cria chamado para o suporte no projeto caso algum material esteja comprometendo o projeto
+
+uso do JavaScript
+
+será disponibilizado o adm e um cliente ficticios
+
+Licença temporárea
+
+Duvidas:
+Permissão de acesso via Licença.
+
+REDES
+TOMCAT
+mySQL
+jdk
