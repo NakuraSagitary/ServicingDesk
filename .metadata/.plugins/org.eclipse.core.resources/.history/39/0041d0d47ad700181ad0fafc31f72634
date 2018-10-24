@@ -1,0 +1,16 @@
+package br.senai.sp.info.service.models;
+
+public enum TiposUsuario {
+	COMUM (1), ADMINISTRADOR(2);
+	
+	private Integer codigo;
+
+	private TiposUsuario(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+	
+}

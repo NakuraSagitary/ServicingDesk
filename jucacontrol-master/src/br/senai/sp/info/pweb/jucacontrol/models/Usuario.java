@@ -131,4 +131,14 @@ public class Usuario implements Authentication{
 	public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
 		
 	}
+
+	public void setCaminhoFoto(String caminhoRelativo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setSobrenome(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 }

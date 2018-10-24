@@ -1,0 +1,7 @@
+@Configuration
+@EnableWebMvc
+public class WebConfig implements WebMvcConfigurer{
+	
+	
+
+}

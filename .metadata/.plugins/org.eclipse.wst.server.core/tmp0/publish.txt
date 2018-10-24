@@ -1,3 +1,4 @@
 #Tomcat publish data
-#Fri Oct 19 09:50:19 BRT 2018
-org.eclipse.jst.jee.server\:jucacontrol-master=C\:\\Users\\23656796840\\Desktop\\WEB's Starter Pack\\apache-tomcat-9.0.12\\wtpwebapps\\jucacontrol-master
+#Wed Oct 24 11:13:37 BRT 2018
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\23656796840\\.m2\\repository\\org\\springframework\\spring-web\\5.0.5.RELEASE\\spring-web-5.0.5.RELEASE.jar=C\:\\Users\\23656796840\\Desktop\\WEB's Starter Pack\\apache-tomcat-8.5.34\\apache-tomcat-8.5.34\\wtpwebapps\\ServiceDesk\\WEB-INF\\lib\\spring-web-5.0.5.RELEASE.jar
+org.eclipse.jst.jee.server\:ServiceDesk=C\:\\Users\\23656796840\\Desktop\\WEB's Starter Pack\\apache-tomcat-8.5.34\\apache-tomcat-8.5.34\\wtpwebapps\\ServiceDesk

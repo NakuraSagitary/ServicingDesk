@@ -1,0 +1,8 @@
+package br.senai.sp.info.service.config;
+@Configuration
+@EnableWebMvc
+public class WebConfig implements WebMvcConfigurer{
+	
+	
+
+}

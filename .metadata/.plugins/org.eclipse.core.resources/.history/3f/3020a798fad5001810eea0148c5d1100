@@ -1,0 +1,11 @@
+package br.senai.sp.info.service.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	private JwtFilter jwtFilter;
+}

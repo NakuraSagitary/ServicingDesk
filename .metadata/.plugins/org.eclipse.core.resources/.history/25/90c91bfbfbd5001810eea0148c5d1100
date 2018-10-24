@@ -1,0 +1,65 @@
+package br.senai.sp.info.service.controllers;
+
+import javax.servlet.ServletContext;
+import javax.validation.Valid;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
+import br.senai.sp.info.service.core.SessionUtils;
+import br.senai.sp.info.service.dao.UsuarioDAO;
+import br.senai.sp.info.service.models.Usuario;
+
+@Controller
+public class UsuarioController {
+
+	@Autowired
+	private UsuarioDAO usuarioDao;
+	
+	@Autowired
+	private SessionUtils sessionUtils;
+	
+	@Autowired
+	private ServletContext context;
+	
+	@GetMapping(value = {"/", ""})
+	
+	public String abrirLogin(Model model) {
+		
+		model.addAttribute("usuario", new Usuario());
+		return "index";
+	}
+	
+	@PostMapping(value = {"/app/adm/usuario/salver"}, consumes = {"multipart/form-data"})
+
+	public String salvar(@Valid Usuario usuario, BindingResult brUsuario,	
+			@RequestParam(name = "isAdministrador", required = false) Boolean administrador) {
+	
+	
+				if(usuario.getId() == null && brUsuario.hasFieldErrors()) {
+					return "usuario/form";				
+		} else if (brUsuario.hasFieldErrors("nome") || brUsuario.hasFieldErrors("sobrenome") || brUsuario.hasFieldErrors("email")) {
+			return "usuario/form";
+		}
+		
+		if(usuario.getId() == null) {
+			usuarioDao.inserir(usuario);
+		} else {
+			Usuario usuarioBuscado = usuarioDao.buscar(usuario.getId());
+			BeanUtils.copyProperties(usuario, usuarioBuscado, "id", "senha");
+			System.out.println(usuarioBuscado.getSenha());
+			System.out.println(usuarioBuscado.getId());
+			usuarioDao.alterar(usuarioBuscado);
+			
+		}
+		
+		return "redirect:/app/adm/usuario";
+	}
+}

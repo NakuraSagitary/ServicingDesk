@@ -23,9 +23,6 @@ import br.senai.sp.info.pweb.jucacontrol.utils.JwtUtils;
 @Component
 public class JwtFilter extends GenericFilterBean {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Override

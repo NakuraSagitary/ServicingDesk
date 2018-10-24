@@ -33,9 +33,12 @@ public class AuthRestController {
 	public ResponseEntity<Object> gerarJwt(@Valid @RequestBody Usuario usuario, BindingResult bindingResult){
 		
 		try {
+			System.out.println("Chegou, fii da mae");
 			Usuario usuarioBuscado = usuarioService.buscarPorEmailESenha(usuario, bindingResult);
+			System.out.println("Buscou, fii da mae");
 			Map<String, String> mapaToken = new HashMap<>();
 			mapaToken.put("token", JwtUtils.gerarTokenAutenticacao(usuarioBuscado));
+			
 			
 			return
 					ResponseEntity
